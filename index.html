@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Form for user input -->
+    <div class="form-container">
+        <h2>Resume Builder Form</h2>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <label for="skills">Skills (comma-separated):</label>
+            <textarea id="skills" name="skills" required></textarea>
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" name="summary" required></textarea>
+
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <button type="submit">Create Resume</button>
+        </form>
+    </div>
+
+    <!-- Resume Preview Section -->
+    <div class="main" id="resumePreview" style="display: none;">
+        
+        <div class="a">
+            <h1 id="resumeName">Ashfaq Ahmed</h1>
+        </div>
+        <div class="b">
+            <h3 id="resumeJobTitle">Web Developer</h3>
+        </div>
+        <div class="c">
+            <div class="l">
+                <u><h5>Contact</h5></u>
+                <p><span><img src="apple.png" alt=""></span><span id="resumePhone">03322354984</span></p>
+                <p><span><img src="gmail.png" alt=""></span><span id="resumeEmail">asadahmed865923@gmail.com</span></p>
+                <p><span><img src="location.png" alt=""></span><span id="resumeAddress">Lyari Karachi</span></p>
+                <u><h5>Education</h5></u>
+                <p id="resumeEducation">Intermediate, <b>2019-2022</b><br><span>Gbhss higher secondary school</span></p>
+                <u><h5>Skills</h5></u>
+                <ul id="resumeSkills" style="color: white;">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="r">
+                <u style="color: black;"><h5>Summary</h5></u>
+                <p id="resumeSummary">"Enthusiastic and detail-oriented junior frontend developer with a solid foundation in HTML, CSS, and JavaScript. Proficient in building responsive and user-friendly interfaces. Passionate about learning modern frameworks like React and improving user experiences. Committed to delivering clean and efficient code while expanding technical knowledge and skills."</p>
+                <u style="color: black;"><h5>Experience</h5></u>
+                <p id="resumeExperience">Salesman, <b>2016-2020</b><br>Salesman at jewellery shop <span>Talbani jewellers</span></p>
+            </div>
+        </div>
+        <button id="editResumeButton">Edit Resume</button>
+        <button id="copyLinkButton">Copy Link</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
